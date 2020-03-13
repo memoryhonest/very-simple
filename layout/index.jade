@@ -24,7 +24,7 @@ block main
                   != list_categories(post.categories, {show_count: false, class: 'post-category', style: 'none', separator: '>'})
               if (post.tags && post.tags.length)
                 .post-tags
-                  != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:'/'})
+                  != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:','})
 
             .post-content
               if post.description
