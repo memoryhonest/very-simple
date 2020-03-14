@@ -571,7 +571,6 @@ footer#footer {
     //display: flex;
     //box-sizing: border-box;
     //padding: 0 20px;
-    text-align: right;
     background: #333;
     color: #CCC;
     border-top: 2px solid #555;
@@ -580,6 +579,8 @@ footer#footer {
     box-shadow: 0 0 2px 1px rgba(200, 200, 200, 0.8);
     transition: background-color .2s ease-in-out;
     margin-bottom: 2em;
+    flex-wrap: wrap;
+    padding: 0.1em 0.5em;
 
     // show full width on small screen
     @media only screen and (max-width: $break-level-2) {
@@ -591,15 +592,19 @@ footer#footer {
     }
 
     .post-time {
-        flex: 1;
-        text-align: left;
         font-family: $font-mono;
         font-size: 14px;
         align-self: center;
+        margin-right: 2em;
+    }
+
+    .post-break {
+        flex-basis: 100%;
+        height: 0;
     }
 
 
-    .post-tags, .post-categories {
+    .post-tags, .post-categories, .post-links {
         &::before {
             font-family: FontAwesome;
         }
@@ -617,14 +622,24 @@ footer#footer {
         }
     }
 
+    .post-links {
+        flex: 1;
+        &::before {
+            content: "\f0c1";
+        }
+    }
+
     .post-tags {
-        margin-left: 1em;
+        flex: 1;
+        text-align: left;
         &::before {
             content: "\f02c";
         }
     }
 
     .post-categories {
+        flex: 1;
+        text-align: left;
         &::before {
             content: "\f07b";
             font-family: FontAwesome;
@@ -634,8 +649,9 @@ footer#footer {
     @media only screen and (max-width: $break-level-3) {
         flex-wrap: wrap;
 
-        .post-tags, .post-categories {
+        .post-tags, .post-categories, .post-links {
             margin-left: auto;
+            white-space: nowrap;
         }
     }
 }
