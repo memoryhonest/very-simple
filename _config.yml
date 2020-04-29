@@ -1,8 +1,8 @@
 # Header
 menu:
   ## If your site is put in a subdirectory, set Home as '/child/'
-  Home: /
-  Archives: archives
+  HOME: /
+  ARCHIVES: archives
 
 social:
   email: memoryhonest@protonmail.com

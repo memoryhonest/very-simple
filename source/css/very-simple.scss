@@ -53,7 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: #333;
+    color: $color-dark-grey;
     font-family: $font-content;
 }
 
@@ -67,15 +67,15 @@ article {
 header {
     padding: 1em 0;
 
-    background: #333;
-    color: #F1F1F1;
+    background: $color-dark-grey;
+    color: $color-near-white;
 
     .container{
         font-family: $font-blog-title;
-        border-bottom: .3em solid #333;
+        border-bottom: .3em solid $color-dark-grey;
 
         .title {
-            color: #EEE;
+            color: $color-near-white;
             text-decoration: none;
             font-size: 2.4em;
         }
@@ -106,8 +106,8 @@ header {
 nav {
     top: 0;
     position: sticky;
-    background: #333;
-    font-family: $font-mono;
+    background: $color-dark-grey;
+    font-family: $font-sans;
     font-size: 1em;
     z-index: 10;
 
@@ -122,7 +122,7 @@ nav {
     a {
         &, &:visited {
             text-decoration: none;
-            color: #F1F1F1;
+            color: $color-near-white;
         }
 
         padding: .625em 1.25em;
@@ -183,7 +183,7 @@ nav {
 @media only screen and (max-width: $break-level-2) {
     #toggle-menu {
         display: block;
-        color: #EEE;
+        color: $color-near-white;
         font-size: 2.2em;
     }
 
@@ -198,16 +198,16 @@ nav {
             display: block;
 
             // style
-            color: #CCC;
-            border-bottom: 1px solid #CCC;
+            color: $color-light-grey;
+            border-bottom: 1px solid $color-light-grey;
 
             &:last-child {
                 border-bottom: none;
             }
 
             &:hover {
-                background: #CCC;
-                color: #333;
+                background: $color-light-grey;
+                color: $color-dark-grey;
             }
 
             // disable hover style
@@ -239,7 +239,7 @@ nav {
         position: absolute;
         height: 100%;
         width: 6px;
-        background: #666; // #333 with opacity 0.75
+        background: $color-light-grey; 
 
         @media only screen and (max-width: $break-level-4) {
             content: none;
@@ -255,6 +255,7 @@ nav {
     color: #666;
     opacity: .6;
     transition: opacity .3s ease-in-out;
+    font-family: $font-sans;
 
     &:hover {
         opacity: 1;
@@ -272,7 +273,7 @@ nav {
         margin-left: .3rem;
         margin-right: .1rem;
         &:hover {
-            color: #333;
+            color: $color-dark-grey;
             border-bottom: 2px solid #666;
         }
 
@@ -305,12 +306,12 @@ $post-time-space: 1em;
 
     .post-time {
         flex: none;
-        font-family: $font-mono;
+        font-family: $font-sans;
         font-size: 0.875rem;
         margin-right: 1rem;
         position: absolute;
         right: 100%;
-        color: #CCC;
+        color: $color-light-grey;
         transition: color .2s ease-in-out;
         white-space: nowrap; // chrome needs this
         top: 50%; // chrome will need this to center vertically
@@ -321,7 +322,7 @@ $post-time-space: 1em;
             bottom: .2ex;
             left: 0;
             right: auto;
-            color: #666;
+            color: $color-light-grey;
             opacity: .6;
             top: auto;
         }
@@ -331,7 +332,7 @@ $post-time-space: 1em;
             position: absolute;
             width: 20px;
             height: 20px;
-            background: #666; // #333 with opacity 0.75
+            background: $color-light-grey; 
             border-radius: 100%;
             left: calc(100% + 1rem + #{$vertical-bar-width}/2 - #{$outer-circle-radius});
             top: calc(50% - #{$outer-circle-radius});
@@ -348,7 +349,7 @@ $post-time-space: 1em;
             position: absolute;
             width: 16px;
             height: 16px;
-            background: #FCF9E8;
+            background: $color-near-white;
             border-radius: 100%;
             transition: background-color .2s ease-in-out;
             left: calc(100% + 1rem + #{$vertical-bar-width}/2 - #{$inner-circle-radius});
@@ -367,7 +368,7 @@ $post-time-space: 1em;
             color: #666;
 
             &::after {
-                background: #A1EFE9;
+                background: $color-light-grey;
             }
         }
     }
@@ -379,17 +380,18 @@ $post-time-space: 1em;
 
         // style for post-title
         .post-title {
-            border-bottom: 1px solid #EEE;
+            // border-bottom: 1px solid $color-near-white; // Goo Goo do not want it.
             transition: border-color .2s ease;
             font-weight: 600;
             font-size: 1.2em;
+            font-family: $font-post-title;
 
             &:hover {
                 border-bottom: 1px solid #666;
             }
 
             a {
-                color: #333;
+                color: $color-dark-grey;
                 text-decoration: none;
                 border: none;
                 display: block;
@@ -458,10 +460,10 @@ $post-time-space: 1em;
     margin: 3.5ex 0;
     overflow: hidden;
     text-align: center;
-    border-bottom: 2px solid #CCC;
+    border-bottom: 2px solid $color-light-grey;
     color: #777;
     @media only screen and (max-width: $break-level-3) {
-        border-top: 2px solid #CCC;
+        border-top: 2px solid $color-light-grey;
     }
 
     * {
@@ -503,14 +505,14 @@ $post-time-space: 1em;
 footer#footer {
     text-align: right;
     margin-top: 2em;
-    background: #333;
+    background: $color-dark-grey;
 
     &, & a, & a:visited {
         color: #AAA;
     }
 
     & a:hover {
-        color: #EEE;
+        color: $color-near-white;
     }
 
     .bar {
@@ -530,8 +532,8 @@ footer#footer {
                 transition: all .2s ease-in-out;
 
                 &:hover {
-                    background: #EEE;
-                    color: #333;
+                    background: $color-near-white;
+                    color: $color-dark-grey;
                 }
             }
         }
@@ -571,8 +573,8 @@ footer#footer {
     //display: flex;
     //box-sizing: border-box;
     //padding: 0 20px;
-    background: #333;
-    color: #CCC;
+    background: $color-dark-grey;
+    color: $color-light-grey;
     border-top: 2px solid #555;
     border-bottom: 2px solid #555;
     display: flex;
@@ -588,11 +590,11 @@ footer#footer {
     }
 
     &:hover {
-        background: #222;
+        background: $color-dark-grey;
     }
 
     .post-time {
-        font-family: $font-mono;
+        font-family: $font-sans;
         font-size: 14px;
         align-self: center;
         margin-right: 2em;
@@ -610,7 +612,7 @@ footer#footer {
         }
 
         a {
-            color: #CCC;
+            color: $color-light-grey;
             text-decoration: none;
             margin: 0 .3rem;
             transition: border-bottom .3s ease-in-out, color .2s ease-in-out;
@@ -674,13 +676,13 @@ article {
     }
 
     h1 {
-        border-bottom: 2px solid #333;
+        border-bottom: 2px solid $color-dark-grey;
         padding: 3px 0;
         font-size: 2em;
     }
 
     h2 {
-        border-bottom: 1px solid #CCC;
+        border-bottom: 1px solid $color-light-grey;
     }
 
     // rule
@@ -789,7 +791,7 @@ article {
     // inline code
     code {
         border: 1px solid #BBB;
-        background: #EEE;
+        background: $color-near-white;
         font-size: 14px;
     }
 
@@ -802,8 +804,8 @@ article {
 
         th {
             text-align: left;
-            background: #333;
-            color: #EEE;
+            background: $color-dark-grey;
+            color: $color-near-white;
         }
 
         th, td {
@@ -876,7 +878,7 @@ article {
             a {
                 display: inline;
                 text-decoration: none;
-                border: 1px dashed #CCC;
+                border: 1px dashed $color-light-grey;
                 border-radius: 3px;
                 margin: .2em;
                 padding: .1em .3em;
@@ -886,14 +888,14 @@ article {
 
                 span {
                     font-size: 0.8em;
-                    border-left: 1px solid #CCC;
+                    border-left: 1px solid $color-light-grey;
                     margin-left: .3em;
                     padding: 0 .3em;
                 }
 
                 &:hover {
                     background: #666;
-                    color: #EEE;
+                    color: $color-near-white;
                 }
             }
         }

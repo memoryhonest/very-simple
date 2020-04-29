@@ -1,13 +1,13 @@
 // define variables
 
-$font-mono: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-mono: "Source Code Pro", Consolas, Monaco, Menlo, monospace;
+$font-sans: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-serif: Georgia, "Times New Roman", serif;
-$font-blog-title: "Comic Sans MS", cursive, LiSu, sans-serif;
-$font-post-title: "Titillium Web","Helvetica Neue",Helvetica, Arial,"Microsoft Yahei",sans-serif;
+$font-blog-title: Verdana, "Helvetica Neue", Helvetica, "Microsoft Yahei", sans-serif;
+$font-post-title: Verdana, "Helvetica Neue", Helvetica, "Microsoft Yahei" ,sans-serif;
 $font-header: 'Helvetica Neue', "Microsoft Yahei","微软雅黑", "WenQuanYi Micro Hei", SimHei, Heiti, Impact, Charcoal, serif;
-$font-content: Helvetica, Tahoma, Arial, STXihei, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Heiti, ubuntu, sans-serif;
-
+// $font-content: Helvetica, Tahoma, Arial, STXihei, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Heiti, ubuntu, sans-serif;
+$font-content: 'Palatino Linotype', Palatino, Garamond, Georgia, 'Times New Roman', Times, serif;
 $font-size-main: 16px;
 $font-size-code: 16px;
 $line-height: 1.6em;
@@ -15,12 +15,15 @@ $line-height-title: 1.1em;
 
 // colors
 $color-background: white;
-$color-border: #CCC;
-$color-link: blue;
-$color-near-white: #FAFAFA;
-$color-underscore: #5DB1B4;
+$color-border: #fcfcfd;
+$color-link: #dcdcdc;
+$color-near-white: #f5f5f5;
+$color-underscore: #dcdcdc;
 $color-main-link: #368CCB;
 $color-main-link-hover: #2A64C8;
+
+$color-light-grey: #dcdcdc;
+$color-dark-grey: #3f3f3f;
 
 
 // width height
